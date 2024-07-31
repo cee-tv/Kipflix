@@ -1,0 +1,360 @@
+footer,header,main {
+    background-color: #333
+}
+
+body,footer p,h1 {
+    margin: 0
+}
+
+#adblocker-message,input,select {
+    box-sizing: border-box;
+    color: #fff
+}
+
+.suggestion,button {
+    transition: background-color .3s
+}
+
+.site-logo,.suggestion img {
+    width: 40px;
+    margin-right: 10px
+}
+
+#adblocker-popup-container,#donation-popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+#adblocker-message,#donation-message {
+    padding: 20px;
+    max-width: 80%;
+    text-align: center
+}
+
+#donation-message,.loading-indicator,.no-results,footer,header {
+    text-align: center
+}
+
+body {
+    font-family: Montserrat,sans-serif;
+    background-color: #1a1a1a;
+    padding: 0;
+    color: #fff
+}
+
+header {
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+main {
+    max-width: 1500px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    border-radius: 8px
+}
+
+.resource {
+    display: flex;
+    flex-direction: column
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: #fff
+}
+
+input,select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #666;
+    border-radius: 5px;
+    background-color: #444
+}
+
+button {
+    padding: 12px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px
+}
+
+button:hover {
+    background-color: #45a049
+}
+
+#embedCode {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #666;
+    background-color: #444;
+    text-align: left;
+    border-radius: 5px;
+    overflow-x: auto
+}
+
+#embedCode iframe {
+    width: 100%;
+    height: 600px
+}
+
+#episode,#season {
+    display: none
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        padding:10px
+    }
+
+    input,select {
+        margin-bottom: 10px
+    }
+
+    button {
+        font-size: 14px
+    }
+
+    #embedCode iframe {
+        height: 400px
+    }
+
+    #episode,#season {
+        display: block
+    }
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px
+}
+
+footer p {
+    color: #fff;
+    font-size: 14px
+}
+
+.discord-button,.dmca-button,.donate-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 14px;
+    background-color: #6681e2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color .3s
+}
+
+.discord-button:hover,.dmca-button:hover,.donate-button:hover {
+    background-color: #5e73b4
+}
+
+.discord-icon-left,.discord-icon-right,.dmca-icon-left,.dmca-icon-right,.donate-icon-left,.donate-icon-right {
+    width: 20px;
+    margin: 0 5px
+}
+
+.discord-icon-right,.dmca-icon-right,.donate-icon-right {
+    margin-left: 5px
+}
+
+.discord-button span,.dmca-button span,.donate-button span {
+    line-height: 1.5
+}
+
+.donate-button {
+    background-color: #f4b400
+}
+
+.donate-button:hover {
+    background-color: #d88e00
+}
+
+#adblocker-popup-container {
+    background: rgba(0,0,0,.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 999
+}
+
+#adblocker-message {
+    background-color: #4caf50;
+    border-radius: 8px
+}
+
+#dismiss-message,.suggestion {
+    background-color: #333;
+    cursor: pointer
+}
+
+#dismiss-message {
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    margin-top: 15px;
+    border-radius: 5px
+}
+
+#searchSuggestions {
+    border: 1px solid #ccc;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none
+}
+
+.suggestion {
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center
+}
+
+.suggestion img {
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px
+}
+
+.suggestion:hover {
+    background-color: #595959
+}
+
+#searchSuggestions.active {
+    display: block
+}
+
+.loading-dots {
+    display: inline-block;
+    animation: 1s infinite loading-dots
+}
+
+.loading-indicator {
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px
+}
+
+.loading-dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #3498db;
+    border-radius: 50%;
+    margin-right: 5px;
+    animation: 1s infinite jump
+}
+
+.loading-dots span:nth-child(2) {
+    animation-delay: .1s
+}
+
+.loading-dots span:nth-child(3) {
+    animation-delay: .2s
+}
+
+@keyframes jump {
+    0%,100%,20%,50%,80% {
+        transform: translateY(0)
+    }
+
+    40% {
+        transform: translateY(-15px)
+    }
+
+    60% {
+        transform: translateY(-5px)
+    }
+}
+
+.no-results {
+    padding: 10px;
+    color: #f66;
+    font-weight: 700
+}
+
+#donation-popup-container {
+    background-color: rgba(0,0,0,.5);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center
+}
+
+#donation-message {
+    background-color: #e7a127;
+    border-radius: 10px;
+    overflow: auto
+}
+
+#donation-message h3 {
+    font-size: 1.2em;
+    color: red;
+    margin-bottom: 10px
+}
+
+#donation-message p {
+    line-height: 1.4;
+    margin-bottom: 10px;
+    font-size: 1em
+}
+
+#donation-message a {
+    color: #007bff;
+    word-wrap: break-word
+}
+
+#donation-message button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em
+}
+
+@media (max-width: 768px) {
+    #donation-message {
+        max-width:90%;
+        padding: 15px;
+        font-size: .9em
+    }
+}
+
+@media (max-width: 480px) {
+    #donation-message {
+        max-width:95%;
+        padding: 10px;
+        font-size: .8em
+    }
+
+    #donation-message h3 {
+        font-size: 1em
+    }
+
+    #donation-message p {
+        margin-bottom: 5px
+    }
+
+    #donation-message button {
+        padding: 8px 16px;
+        font-size: .9em
+    }
+}
